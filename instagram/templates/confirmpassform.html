@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery</title>
+<link rel="icon" href="{% static 'favicon.png' %}" type="image/x-icon">
+<link rel="stylesheet" type="text/css" href="{% static 'password\confimpass.css' %}">
+
+</head>
+<body>
+
+<div class="container">
+  <div>
+    {{errors}}
+  </div>
+  <h2>Password Confirmation Form</h2>
+  <form action="" method="POST" >
+    {%csrf_token%}
+    {{form.as_p}}
+    <button id="confim-btn">Submit</button>
+  </form>
+</div>
+</body>
+</html>

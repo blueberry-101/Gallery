@@ -1,0 +1,22 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thank You</title>
+<link rel="icon" href="{% static 'favicon.png' %}" type="image/x-icon">
+<link rel="stylesheet" type="text/css" href="{% static 'feedbacksubmitted.css' %}">
+</head>
+<body>
+<div class="container">
+  <a href="{% url 'loginpage' %}"  class="instagram-btn">
+    <img src="{% static 'instagram-logo.png' %}" alt="Instagram Logo">
+  </a>
+  <h1>Feedback Submitted Successfully</h1>
+  <p>Thank you for your feedback! We appreciate your input and will use it to improve our services.</p>
+  <p><a href="{% url 'loginpage' %}" class="ok-link">OK</a></p>
+</div>
+
+</body>
+</html>

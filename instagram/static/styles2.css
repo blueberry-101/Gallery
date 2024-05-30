@@ -1,0 +1,68 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #fafafa;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-box {
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  text-align: center;
+  width: 310px; /* Adjust the width to make it similar to Instagram's layout */
+}
+
+.logo {
+  width: 90px; /* Adjust the width to match Instagram's logo size */
+  height: auto;
+  margin-bottom: 20px;
+}
+
+input {
+  width: 100%;
+  padding: 7px;
+  margin: 3px 4px 5px -9px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  color: white;
+  background-color: #3897f0;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.terms {
+  font-size: 12px; /* Reduce font size for terms and conditions */
+  color: #999;
+  margin-top: 10px;
+}
+
+.separator {
+  margin: 20px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.login-link {
+  font-size: 14px;
+  color: #999;
+  margin-top: 10px;
+}
+
+.login-link a {
+  color: #3897f0;
+  text-decoration: none;
+}

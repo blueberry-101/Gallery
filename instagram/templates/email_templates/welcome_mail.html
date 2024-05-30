@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Our Gallery!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            color: #333333;
+        }
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .header {
+            background-color: #4a90e2;
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+        }
+        .header img {
+            max-width: 50px;
+            border-radius: 50%;
+        }
+        .content {
+            padding: 20px;
+        }
+        .content h1 {
+            color: #4a90e2;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .gallery img {
+            width: 70%;
+            margin-bottom: 10px;
+            border-radius: 8px;
+        }
+        .footer {
+            background-color: #f4f4f9;
+            text-align: center;
+            padding: 10px;
+            font-size: 12px;
+            color: #888888;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+          <img src="https://res.cloudinary.com/dmxd0zztv/image/upload/v1716031895/static_files_Gallery/instagram-logo-fill-svgrepo-com_wyjgfg.png" alt="Gallery Logo">
+            <h1>Welcome to Our Gallery!</h1>
+        </div>
+        <div class="content">
+            <h1>Hello {{name}},</h1>
+            <p>We're thrilled to have you join our community of art enthusiasts. Explore, discover, and share your passion for art with others.</p>
+            <p>Here are some featured artworks to get you started:</p>
+            <div class="gallery">
+                <a href="{{login_url}}">
+                    <img src="https://res.cloudinary.com/dmxd0zztv/image/upload/v1716809261/static_files_Gallery/image_1_ufm8io.png" alt="Artworks">
+                </a>
+            </div>
+            <p>We hope you enjoy your time here. If you have any questions, feel free to reach out to us at any time.</p>
+            <p>Best regards,</p>
+            <p>The Gallery Team</p>
+        </div>
+        <div class="footer">
+            <p>&copy; {{year}}  Gallery Website. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>

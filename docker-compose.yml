@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    command: gunicorn --bind 0.0.0.0:8080 Finksta.wsgi:application  # Use port 8080
+    volumes:
+      - .:/app
+    ports:
+      - "8080:8080"  # Map port 8080 on host to port 8080 in container
+    env_file:
+      - /etc/secrets/.env
+    depends_on:
+      - celery
+
+  celery:
+    build: .
+    command: celery -A Finksta worker --loglevel=info
+    volumes:
+      - .:/app
+    env_file:
+      - /etc/secrets/.env
+    depends_on:
+      - redis
+
+  redis:
+    image: redis:6.2
+    ports:
+      - "6379:6379"

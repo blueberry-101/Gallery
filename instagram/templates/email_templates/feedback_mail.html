@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>We Value Your Feedback!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            color: #333333;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .header {
+            background-color: #4a90e2;
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+        }
+        .header img {
+            max-width: 50px;
+            border-radius: 50%;
+        }
+        .content {
+            padding: 20px;
+        }
+        .content h1 {
+            color: #4a90e2;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+        .gallery img {
+            width: 80%;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+        .feedback-btn {
+            display: inline-block;
+            background-color: #4a90e2;
+            color: #ffffff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+        .footer {
+            background-color: #f4f4f9;
+            text-align: center;
+            padding: 10px;
+            font-size: 12px;
+            color: #888888;
+        }
+        @media (max-width: 600px) {
+            .gallery img {
+                width: 48%;
+            }
+        }
+        @media (max-width: 400px) {
+            .header, .content, .footer {
+                padding: 10px;
+            }
+            .header h1 {
+                font-size: 24px;
+            }
+            .content h1 {
+                font-size: 20px;
+            }
+            .gallery img {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="https://res.cloudinary.com/dmxd0zztv/image/upload/v1716031895/static_files_Gallery/instagram-logo-fill-svgrepo-com_wyjgfg.png" alt="Gallery Logo">
+            <h1>We Value Your Feedback!</h1>
+        </div>
+        <div class="content">
+            <h1>Hello {{name}},</h1>
+            <p>Congratulations on your first post on our gallery website! 🎉 We're thrilled to have you as part of our creative community. Your artwork truly adds color to our gallery (pun totally intended!).</p>
+            <p>We hope you are enjoying your time at our gallery. We are constantly striving to improve and offer the best experience to our users. To help us do better, we would love to hear your feedback!</p>
+            <div class="gallery">
+                <img src="{{post_url}}" alt="Your First Artwork">
+            </div>
+            <p>Your feedback is invaluable to us. Please click the button below to fill out our feedback form.</p>
+            <a href="{{feedback_url}}" class="feedback-btn">Give Feedback</a>
+            <p>Thank you for helping us improve!</p>
+            <p>Best regards,</p>
+            <p>The Gallery Team</p>
+        </div>
+
+        
+        <div class="footer">
+            <p>&copy; {{year}}  Gallery Website. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>

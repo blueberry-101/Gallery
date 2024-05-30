@@ -1,0 +1,75 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f2f5; /* Facebook-inspired background color */
+}
+
+.container {
+  width: 80%;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-container {
+  text-align: center;
+  position: relative;
+  display: inline-block;
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease-in-out;
+}
+
+.image-container:hover img {
+  transform: scale(1.01);
+}
+
+.caption {
+  margin-top: 20px;
+  color: #333;
+  font-size: 18px;
+}
+
+.caption p {
+  margin: 0;
+}
+
+/* Animations */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.container {
+  animation: fade-in 1s ease-out;
+}
+
+/* Style for caption and date */
+.caption-and-date {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #999; /* Facebook-inspired color for captions */
+}
+
+/* Adjust container height for vertical images */
+.container img {
+  max-height: calc(100vh - 180px); /* Adjust as needed */
+}

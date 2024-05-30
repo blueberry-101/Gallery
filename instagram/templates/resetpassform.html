@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="icon" href="{% static 'favicon.png' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'password/reset.css' %}">
+</head>
+<body>
+    <!-- messages.html -->
+    <h1>
+
+    </h1>
+
+   
+    
+
+    <div class="container">
+        <ul>
+            {% if messages %}
+            {% for message in messages %}
+            <li class="message">
+                <div class="message-tag">{{ message.tags }}</div>
+                <div class="message-text">{{ message }}</div>
+            </li>
+            {% endfor %}
+            {% endif %}
+        </ul>
+        <section>
+            <!-- Reset Container  -->
+            <h2>Password Reset Form</h2>
+            <form action="" method="POST">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button id="send-link-btn">Send Reset Link</button>
+            </form>
+        </section>
+    </div>
+</body>
+</html>

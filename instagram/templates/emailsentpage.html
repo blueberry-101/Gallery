@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Password Reset Email Sent</title>
+<link rel="icon" href="{% static 'favicon.png' %}" type="image/x-icon">
+<link rel="stylesheet" href="{% static 'password/emailsent.css' %}">
+</head>
+<body>
+
+<a href="{% url 'loginpage' %}" class="login-btn">Login</a>
+<img src="{% static 'instagram-logo.png' %}" alt="Logo" class="logo">
+
+<div class="container">
+  <div class="card">
+    We have sent a reset email at <span style="font-weight: bold;">{{mask_email}}</span> 
+        It will expire within an hour.
+    <p><a href="{% url 'loginpage' %}" class="ok-link">OK</a></p>
+  </div>
+</div>
+
+</body>
+</html>

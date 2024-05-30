@@ -1,0 +1,73 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #fafafa;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-box {
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  text-align: center;
+  width:310px;
+}
+
+.logo {
+  width: 90px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 3px 4px 5px -9px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  color: white;
+  background-color: #3897f0;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.forgot-password {
+  font-size: 14px;
+  color: #999;
+  margin-top: 10px;
+}
+
+.separator {
+  margin: 20px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.signup-link {
+  font-size: 14px;
+  color: #999;
+  margin-top: 10px;
+}
+
+.signup-link a {
+  color: #3897f0;
+  text-decoration: none;
+}
+
+.forgot-password a {
+ color:#999;
+ text-decoration: none;
+}

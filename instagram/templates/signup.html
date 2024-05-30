@@ -1,0 +1,28 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'styles2.css'  %}">
+  <title>Instagram Signup</title>
+  <link rel="icon" href="{% static 'favicon.png' %}" type="image/x-icon">
+</head>
+<body>
+  <div class="container">
+    <div class="login-box">
+      <img src="{% static 'instagram-logo.png' %}" alt="Instagram Logo" class="logo">
+      <form action="" method="POST">
+        {% csrf_token %}
+        {{signupfm.as_p}}
+        <button id="signup-btn">Sign Up</button>
+      </form>
+      <p class="terms">By signing up, you agree to our <a href="{% url 'policiespage' %}" id="terms-link">Terms</a> and <a href="{% url 'policiespage' %}">Privacy Policy</a>.</p>
+      <div class="separator"></div>
+      <p class="login-link">Already have an account? <a href="{% url 'loginpage' %}">Log in</a></p>
+    </div>
+  </div>
+  <script src="{% static 'script.js' %}"></script>
+</body>
+</html>

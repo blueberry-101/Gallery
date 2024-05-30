@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Post</title>
+<link rel="icon" href="{% static 'favicon.png' %}" type="image/x-icon">
+<link rel="stylesheet" type="text/css" href="{% static 'imagecard.css' %}">
+</head>
+<body>
+
+<div class="container">
+  <div class="image-container">
+    <img src="{{ image.image_name.url }}" alt="Placeholder Image">
+  </div>
+  <div class="caption-and-date">
+    <p>{{image.caption}}</p>
+    <p>Date: {{image.image_date_time}}</p>
+  </div>
+  <div>
+    <a href="{% url 'deleteimage' image image.id page_number%}" target="_self">
+      <img src="{% static 'delete.png' %}" alt="Delete" width="40" height="40">
+    </a>    
+  </div>
+</div>
+
+</body>
+</html>

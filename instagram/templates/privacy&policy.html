@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms and Privacy Policy</title>
+    <link rel="icon" href="{% static 'favicon.png' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'privacy&policy.css'  %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Terms of Service & Privacy Policy</h1>
+
+        <h2>Terms of Service</h2>
+        <p>Welcome to the party! By joining our platform, you're agreeing to stalk your ex's new relationship, post photos of your avocado toast like it's fine art, and pretend you read the Terms of Service when we all know you didn't.</p>
+
+        <h2>Privacy Policy</h2>
+        <p>We promise to guard your privacy tighter than a squirrel hoards nuts. Your personal information is as safe with us as a secret handshake at a penguin convention. We won't sell your data to anyone, not even to unicorns!</p>
+
+        <footer>
+            <p>&copy; 2024 <a href="{% url 'loginpage' %}" >
+                <img src="{% static 'instagram-logo.png' %}" alt="Instagram Logo" class="instagram-logo">
+            </a>. All rights reserved. 
+                <!-- Instagram Logo with Link -->
+                
+            </p>
+        </footer>
+    </div>
+</body>
+</html>

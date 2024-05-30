@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'styles.css' %}">
+  <title>Gallery</title>
+  <link rel="icon" href="{% static 'favicon.png' %}" type="image/x-icon">
+</head>
+<body>
+  <div class="container">
+    <div class="login-box">
+      <img src="{% static 'instagram-logo.png' %}" alt="Instagram Logo" class="logo">
+      <p class="error-message" style="font-size: 20px;color: #000000;margin-top: 10px;"> {{notfounderror}}</p>
+
+      <form action="" method="POST" novalidate>
+        {%csrf_token%}
+        {{loginfm.as_p}}
+        <button id="login-btn">Log In</button>
+      </form>
+      <p class="forgot-password"><a href="{% url 'resetpassword' %}">Forgot Password?</a></p>
+      <div class="separator"></div>
+      <p class="signup-link">Don't have an account? <a href="{% url 'signuppage' %}">Sign up</a></p>
+    </div>
+  </div>
+  <script src="{% static 'script.js' %}"></script>
+</body>
+</html>

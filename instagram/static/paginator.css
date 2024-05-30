@@ -1,0 +1,33 @@
+.paginator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .paginator a {
+    color: #1877f2;;
+    text-decoration: none;
+    padding: 5px 10px;
+    border: 1px solid #1877f2;;
+    border-radius: 3px;
+  }
+  
+  .paginator a:hover {
+    background-color: #1877f2;;
+    color: #fff;
+  }
+  
+  .paginator .page-number {
+    margin: 0 10px;
+  }
+  
+  .paginator .prev {
+    margin-right: 10px;
+  }
+  
+  .paginator .next {
+    margin-left: 10px;
+  }
+  
