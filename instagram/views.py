@@ -296,7 +296,7 @@ class ConfirmPassword(View):
                 email = payload.get("email")
                 e = changePassword(email,filled_form.cleaned_data.get("password1"))
                 print(e)
-                return redirect("loginpage")
+                return render(request,"passwordchanged.html")
             except Exception as e:
                 print("while posting form",e)
                 context = {"errors":e,"form":filled_form}
@@ -362,4 +362,3 @@ def feedback_view(request:HttpRequest):
     else:
         form = FeedbackForm()
     return render(request, 'feedbackpage.html', {'form': form})
-
