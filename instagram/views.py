@@ -6,6 +6,7 @@ from django.utils.decorators import method_decorator
 from django.core.paginator import Paginator
 from django.contrib import messages
 from django.views.decorators.csrf import csrf_exempt
+from django.views.decorators.cache import cache_control
 
 from .forms import SignUpForm, LoginForm, ConfirmPasswordForm, ForgetPasswordForm, FeedbackForm  # Importing forms
 from .models import UserInfoModel, FeedbackData  # Importing models
@@ -28,6 +29,7 @@ SECERT = SECRET_KEY
 
 # SIGNUP VIEWS
 
+@method_decorator(cache_control(no_cache=True, no_store=True, must_revalidate=True))
 class SignUpClass(View):
 
     # Handling GET request for signup
@@ -70,6 +72,7 @@ class SignUpClass(View):
 
 # LOGIN VIEW
 
+@method_decorator(cache_control(no_cache=True, no_store=True, must_revalidate=True))
 class LoginClass(View):
 
     # Handling GET request for login
@@ -130,6 +133,7 @@ from .forms import ImageForm
 from .models import ImageData
 from .models import DummyImages
 
+@cache_control(no_cache=True, no_store=True, must_revalidate=True)
 @is_user_middleware
 def showfeed(request:HttpRequest, username):
     print(request.user)
@@ -214,6 +218,7 @@ def showfeed(request:HttpRequest, username):
         empty_image_form = ImageForm()
         return render(request, template_name='feed.html', context={"form": empty_image_form, "images": combined_page,"nameofuser": name,"username":username})
 
+@cache_control(no_cache=True, no_store=True, must_revalidate=True)
 @is_user_middleware   
 def image_detail(request:HttpRequest, username,imagetype,image_id,page_number):
 
@@ -231,7 +236,7 @@ def image_detail(request:HttpRequest, username,imagetype,image_id,page_number):
         print("error in dimage",e)
         return redirect("pagenotfound",path=f"{path}")
 
-
+@cache_control(no_cache=True, no_store=True, must_revalidate=True)
 def delete_image(request:HttpRequest,imagetype,image_id,page_number):
     # print("image type",imagetype)
     if imagetype == "dimage":
@@ -261,6 +266,7 @@ def policies(request:HttpRequest):
     print(login_url)
 
     return render(request, template_name="privacy&policy.html")
+
 
 @method_decorator(csrf_exempt, name='dispatch')
 class ConfirmPassword(View):
