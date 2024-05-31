@@ -261,10 +261,6 @@ def page_not_found(request:HttpRequest, path=None):
 
 # Policies Page
 def policies(request:HttpRequest):
-    from .important import build_absolute_uri
-    login_url = build_absolute_uri('feedback',)
-    print(login_url)
-
     return render(request, template_name="privacy&policy.html")
 
 
