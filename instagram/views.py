@@ -29,7 +29,7 @@ SECERT = SECRET_KEY
 
 # SIGNUP VIEWS
 
-@method_decorator(cache_control(no_cache=True, no_store=True, must_revalidate=True))
+@method_decorator(cache_control(no_cache=True, no_store=True, must_revalidate=True), name='dispatch')
 class SignUpClass(View):
 
     # Handling GET request for signup
@@ -72,7 +72,7 @@ class SignUpClass(View):
 
 # LOGIN VIEW
 
-@method_decorator(cache_control(no_cache=True, no_store=True, must_revalidate=True))
+@method_decorator(cache_control(no_cache=True, no_store=True, must_revalidate=True), name='dispatch')
 class LoginClass(View):
 
     # Handling GET request for login
