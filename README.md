@@ -46,7 +46,7 @@
 ## Overview
 
 
-#[Live Demo](https://whitegallery.up.railway.app/)
+## [Live Demo](https://whitegallery.up.railway.app/)
 
 
 Gallery is a Django-based project designed to provide a comprehensive platform for managing and displaying images. The project features a robust backend for handling image uploads, storage, and retrieval, along with a clean and intuitive frontend interface for users.
