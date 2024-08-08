@@ -45,17 +45,23 @@
 
 ## Overview
 
+
+#[Live Demo](https://whitegallery.up.railway.app/)
+
+
 Gallery is a Django-based project designed to provide a comprehensive platform for managing and displaying images. The project features a robust backend for handling image uploads, storage, and retrieval, along with a clean and intuitive frontend interface for users.
 
 <p align="center">
   <img src="https://github.com/blueberry-101/Gallery/blob/main/readmeassets/Screenshot%202024-05-31%20165656.jpg" alt="Screenshot 1" width="800" />
+<img src="https://github.com/blueberry-101/Gallery/blob/main/readmeassets/Screenshot%202024-07-17%20015437.jpg" alt="Screenshot 6" width="800" />
   <img src="https://github.com/blueberry-101/Gallery/blob/main/readmeassets/Screenshot%202024-05-31%20165756.jpg" alt="Screenshot 2" width="800" />
   <img src="https://github.com/blueberry-101/Gallery/blob/main/readmeassets/Screenshot%202024-05-31%20165829.jpg" alt="Screenshot 3" width="800" />
   <img src="https://github.com/blueberry-101/Gallery/blob/main/readmeassets/Screenshot%202024-05-31%20170000.jpg" alt="Screenshot 4" width="800" />
   <img src="https://github.com/blueberry-101/Gallery/blob/main/readmeassets/Screenshot%202024-05-31%20170134.jpg" alt="Screenshot 5" width="800" />
+  
 </p>
 
-[Live Demo](https://whitegallery.up.railway.app/)
+
 
 ---
 
